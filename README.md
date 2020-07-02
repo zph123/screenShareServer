@@ -27,7 +27,7 @@ https://wanwang.aliyun.com/domain/购买个域名一年几十元。证书就是�
      1. 代码成型，自行搭建，直接修改相关的配置参数即可
      2. 代码部分不复杂，无论是websocket服务端还是webrtc客户端都是用原生语法的代码写的，方便更改代码，适合入门级，弄清楚webrtc以及websocket交互的原理
      3. php的websocket服务放到了Laravel框架中，方便后续进行curd
-     4. webrtc的web代码通过vue cli开发，页面布局组件使用的vant（https://youzan.github.io/vant/#/zh-CN/），起到了快速开发前端页面的好处。
+     4. webrtc的web代码通过vue cli开发，页面布局组件使用的vant（ https://youzan.github.io/vant/#/zh-CN/ ），起到了快速开发前端页面的好处。
         
 * 缺点：
      1. 1v1的屏幕共享，不支持多人，原因是没有采用sfu等模式
@@ -39,7 +39,7 @@ https://wanwang.aliyun.com/domain/购买个域名一年几十元。证书就是�
 
 1. 首先安装PHP（不要再windows中测试，swoole不支持windows环境）
 
-    PHP安装方式很多，比如：lnmp一键安装（https://lnmp.org/install.html）等
+    PHP安装方式很多，比如：lnmp一键安装（ https://lnmp.org/install.html ）等
 
 2. 安装PHP的Swoole扩展(openssl要编译进去)
 
@@ -57,15 +57,11 @@ https://wanwang.aliyun.com/domain/购买个域名一年几十元。证书就是�
 
     `cd xxxxx`   
     
-5. 下载依赖（https://developer.aliyun.com/composer）
-
-    `composer install`
-   
-6. 复制配置文件
+5. 复制配置文件
 
     `cp .env.example .env` 
 
-7. 更改配置文件.env
+6. 更改配置文件.env
     ```
    #redis配置
    REDIS_HOST=127.0.0.1
@@ -77,9 +73,12 @@ https://wanwang.aliyun.com/domain/购买个域名一年几十元。证书就是�
    SSL_CERT_FILE = /data/sslcert/3800167_www.xxx.com.pem
    SSL_KEY_FILE = /data/sslcert/3800167_www.xxx.com.key
     ```
- 
-8. 安装redis，存储数据用（https://redis.io/download）
- 
+   
+7. 安装redis，存储数据（ https://redis.io/download ）
+
+8. 下载依赖（ https://developer.aliyun.com/composer ）
+     `composer install`
+     
 9. 启动进程websocket服务
  
     输入
@@ -88,7 +87,7 @@ https://wanwang.aliyun.com/domain/购买个域名一年几十元。证书就是�
     `string(13) "WebrtcService"`
     说明启动成功
     
-10. 打开http://www.websocket-test.com/，测试wss服务
+10. 打开http://www.websocket-test.com/  测试wss服务
     
     断开默认连接，输入`wss://www.xxx.com:9501/`点击连接，页面会提示`Websocket连接已建立，正在等待数据...`
     回到命令行终端看到`string(5) "getFd" fd2进入房间`说明服务提供有效
